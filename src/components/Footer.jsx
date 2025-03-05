@@ -42,8 +42,10 @@ const Footer = () => {
            </Link>
 
 
-
-           <li>FAQs</li>
+          <Link href={"/feedback"}>
+          <li>Feedback</li>
+          </Link>
+          
            <li>Blogs</li>
         </ul>
            <ul> 

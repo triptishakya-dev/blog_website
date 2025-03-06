@@ -21,6 +21,9 @@ const Navbar = () => {
             </div>
             <div className='mr-5 flex gap-4'>
                 <FaSearch className='mt-2'/>  
+                <Link href={"/signUp"}>
+                <button className='bg-black px-4 py-2 rounded-lg'> Sign up </button>
+                </Link>
                 <Link href={"/signIn"}>
                 <button className='bg-green-700 px-4 py-2 rounded-lg'> Sign in </button>
                 </Link>

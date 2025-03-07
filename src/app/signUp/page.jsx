@@ -1,26 +1,30 @@
 "use client";
 import React, { useState } from "react";
 
-const page = () => {
+const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const formData = { name, email, password };
 
-    try {
-      const response = await fetch("/api/contactUs", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
+const formData = { name, email, password };
+
+try {
+  const reponse = await fetch ("/api/register",{
+    method: "POST",
+    headers: {"content-type": "application/json" },
+    body: JSON.stringify(formData),
+  });
+} catch (error) {
+  console.error(error);
+  
+}}
+
+
+   
 
   return (
     <div className="h-[100vh] w-full bg-gradient-to-r from-green-100 via-blue-500 to-purple-500 flex justify-center items-center">
@@ -29,7 +33,7 @@ const page = () => {
           <p className="text-gray-600 text-base">
             Welcome! Please register to continue.
           </p>
-        <form className="flex flex-col py-5  gap-4">
+        <form className="flex flex-col py-5  gap-4" onSubmit={handleSubmit}>
          
 
           <div className="flex flex-col">
@@ -92,4 +96,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SignUp

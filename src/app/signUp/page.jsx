@@ -11,6 +11,7 @@ const handleSubmit = async (e) => {
 
 
 const formData = { name, email, password };
+console.log(formData)
 
 try {
   const reponse = await fetch ("/api/register",{

@@ -1,16 +1,11 @@
-import BlogSsction from '@/components/BlogSsction'
-import HeroSection from '@/components/HeroSection'
-import Tripti from '@/components/Tripti'
-import React from 'react'
+"use client";
 
-const page = () => {
+import BlogList from "@/components/BlogList";
+
+export default function Home() {
   return (
-    <div>
-      
-    <HeroSection/>
-    <BlogSsction/>
-     </div>
-  )
+    <>
+      <BlogList />
+    </>
+  );
 }
-
-export default page

@@ -1,6 +1,7 @@
 import connectDB from "@/lib/dbConnect";
 import userModels from "@/models/userModels";
 import { NextResponse } from "next/server";
+import bcrypt from 'bcrypt'
 
 export async function POST(req) {
     try {
@@ -14,8 +15,11 @@ export async function POST(req) {
         await connectDB();
         console.log("Connected to the database");
 
+        const hassedPassword = await bcrypt.hash(password , 15)
+        console.log(hassedPassword)
 
-        const newMessage = new userModels({name,email,password});
+
+        const newMessage = new userModels({name,email,password: hassedPassword});
         await newMessage.save()
 
 

@@ -5,10 +5,13 @@ import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { name, message } = await req.json();
+    const { name, email, phoneNo, feedback, rating } = await req.json();
 
-    console.log(message);
     console.log(name);
+    console.log(email);
+    console.log(phoneNo);
+    console.log(feedback);
+    console.log(rating);
 
     console.log("Connecting to the database");
     await connectDB();
@@ -16,7 +19,10 @@ export async function POST(req) {
 
     const receivedData = {
       name,
-      message,
+      email,
+      phoneNo,
+      feedback,
+      rating,
     };
 
     const newMessage = new feedbackModels(receivedData);

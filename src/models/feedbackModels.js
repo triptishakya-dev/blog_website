@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 const feedbackSchema = mongoose.Schema({
     name:{
@@ -5,10 +6,26 @@ const feedbackSchema = mongoose.Schema({
         required: true,
     },
 
-    message:{
+    email:{
         type:String,
         required: true,
+    },
+
+    phoneNo:{
+        type:Number,
+        required: true,
+    },
+
+    feedback:{
+        type:String,
+        required: true,
+    },
+    rating:{
+        type:Number,
+        required:true,
     }
+
+
     
 },
 )

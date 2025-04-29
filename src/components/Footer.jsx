@@ -1,84 +1,18 @@
-import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
-import { SiApplepay } from "react-icons/si";
-import { FaCcVisa } from "react-icons/fa";
-import { FaAmazonPay } from "react-icons/fa6";
-import { FaCcDiscover } from "react-icons/fa6";
+import logo_light from '../../public/Assets/logo_light.png'
+import { assets } from '../../public/Assets/assets'
 
-
-
-const Footer = () => {
+export const Footer = () => {
   return (
-    <div>
-      <div className='flex justify-between p-6 '>
-        <ul>
-          <h1 className='font-extrabold mb-6'>
-          About Us
-        </h1>
-          <p>Lorem ipsum dolor sit amet </p>
-        </ul>
-
-           <ul>
-            <h1 className='font-extrabold mb-6'>
-            My Account
-           </h1>
-          <li>All Products</li>
-          <li>My Account</li>
-          <li>Order History</li>
-          <li>Shopping Cart</li>
-        </ul>
-        <ul className='cursor-pointer'>
-        <h1 className='font-extrabold mb-6'>
-          Helps
-        </h1>
-
-
-            <Link href={"/aboutUs"}>
-            <li>About Us</li>
-            </Link>
-           
-           <Link href={"/contactUs"}>
-           <li>Contact</li>
-           </Link>
-
-
-          <Link href={"/feedback"}>
-          <li>Feedback</li>
-          </Link>
-          
-           <li>Blogs</li>
-        </ul>
-           <ul> 
-            <h1 className='font-extrabold mb-6'>
-            Categories
-            </h1>
-           <li>Students</li>
-           <li>Health-Conscious individuals</li>
-           <li>Parents</li>
-           <li>Brain Booster</li>
-           <li>Immunity Booster</li>
-        </ul>
-        <ul> 
-          <h1 className='font-extrabold mb-6'>
-          Proxy
-          </h1>
-           <li>Return Policy</li>
-           <li>Shipping Policy</li>
-           <li>Privacy Policy</li>
-           <li>Terms & Condition</li>
-        </ul>
-      </div>
-      <div className='flex justify-between p-6'>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-        <div className='flex items-end gap-3 text-3xl'><SiApplepay />
-        <FaCcVisa />
-        <FaAmazonPay /> 
-        <FaCcDiscover />
-        </div>
-        
+    <div className='flex justify-around flex-col gap-2 sm:gap-0 sm:flex-row bg-black pb-5 items-center'>
+      <Image src={logo_light} alt='' width={120} />
+      <p className='text-sm text-white'>All right reserved. Copyright @blogger</p>
+      <div className='flex'>
+      <Image src={assets.facebook_icon} alt='' width={40} />
+      <Image src={assets.twitter_icon} alt='' width={40} />
+      <Image src={assets.googleplus_icon} alt='' width={40} />
       </div>
     </div>
   )
 }
-
-export default Footer

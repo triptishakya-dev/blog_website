@@ -10,12 +10,13 @@ const Navbar = () => {
         <Link href={"/"}>
         <Image src={logo} width={180} alt="" className="w-[130px] sm:w-auto cursor-pointer" />
         </Link>
-        <button className="text-black rounded-md px-3 py-1 sm:px-6 sm:py-3 border border-solid font-medium flex gap-2 items-center shadow-[-7px_7px_0px_#000000]">
-          get started
+        <Link href={"/contactUs"}> <button className="text-black rounded-md px-3 py-1 sm:px-6 sm:py-3 border border-solid font-medium flex gap-2 items-center shadow-[-7px_7px_0px_#000000]">
+          Contact us
           <Image src={arrow} alt="" />
-        </button>
+        </button></Link>
+       
       </div>
-
+   
      
     </div>
   );

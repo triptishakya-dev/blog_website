@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div className='flex justify-around flex-col gap-2 sm:gap-0 sm:flex-row bg-black pb-5 items-center'>
       <Image src={logo_light} alt='' width={120} />
-      <p className='text-sm text-white'>All right reserved. Copyright @blogger</p>
+      <p className='text-sm text-white'>All right reserved © Made by <span className='font-bold'>Tripti</span></p>
       <div className='flex'>
       <Image src={assets.facebook_icon} alt='' width={40} />
       <Image src={assets.twitter_icon} alt='' width={40} />
